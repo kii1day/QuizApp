@@ -1,0 +1,141 @@
+@charset "UTF-8";
+body {
+margin:10 30px;
+padding: 0 50px;
+}
+h1 {
+text-align: center;
+}
+details {
+  border: 1px solid #ccc;
+}
+details:not(:last-child) {
+  margin-bottom: 20px;
+}
+details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 10px;
+  background: #e4e4e4;
+  font-size: 18px;
+  font-weight: bold;
+}
+#corr{
+	color: red;
+}
+#unc{
+	color: blue;
+}
+details p {
+  margin: 0;
+  padding: 20px;
+}
+/*以下、追加した項目*/
+/* 吹き出しのコンテナ */
+.bubble-container {
+  display: flex;
+  align-items: center; /* 写真と解説欄を縦方向に中央寄せする */
+  justify-content: space-between; /* 写真と解説欄を水平方向に均等に配置 */
+}
+
+/* 吹き出しのスタイル */
+.cloud-bubble {
+  background-color: #f0f0f0; /* 吹き出しの背景色 */
+  border-radius: 10px; /* 吹き出しの角を丸くする */
+  padding: 30px;  /*内容と吹き出しの境界の間のスペース */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* ドロップシャドウ */
+  position: relative; /* 相対位置 */
+  flex: 2; /* 解説欄部分が可変幅で残りのスペースを占めるように */
+  font:20pt 'MS Sans Serif';
+}
+/* 吹き出しの尾根部分（三角形） */
+.cloud-bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px; /* 左側に配置 */
+  margin-top: -10px; /* 三角形を垂直方向に中央に配置 */
+  border-width: 10px; /* 三角形のサイズ */
+  border-style: solid;
+  border-color: transparent transparent transparent #f0f0f0; /* 透明で影のない部分 */
+}
+/*基本選択肢のスタイル*/
+.selecter{
+	margin: 1px 10px;
+    background: #CBE8FA;
+    cursor: pointer;
+    font-size: 15px; /* フォントサイズを設定 */
+    border: none; /* ボーダーを無効にする */
+}
+/* 正解の選択肢の背景色 */
+.rightchoice {
+    margin: 1px 10px;
+    background: #ffcc00;/*正解の選択肢を黄色に設定*/
+    cursor: pointer;
+    font-size: 15px; /* フォントサイズを設定 */
+    border: none; /* ボーダーを無効にする */
+}
+/* 自分の選択肢のカラー変更*/
+font{ 
+	color: red;
+}
+.suihei{
+ display: flex; /* 親要素をフレックスコンテナにする */
+ align-items: center;
+ justify-content: space-between;
+ height: 100%; /* 選択肢の要素と同じ高さに設定 */
+ margin-bottom: 20px;
+}
+.photo_judge {
+  flex: 1; /* 写真部分が可変幅で残りのスペースを占めるように */
+  text-align: center; /* 写真を中央寄せする */
+}
+/* 写真をリサイズしない場合のスタイル */
+.photo_judge img {
+   width: 50%;
+   height: 50%;
+}
+
+/*選択肢の配置レイアウト*/
+.flexbox {
+    align-items: flex-start; /* 選択肢を左寄せに配置 */
+    padding:25px 10px;
+    position: relative; /* 相対位置 */
+    flex: 2; /* 解説欄部分が可変幅で残りのスペースを占めるように */
+    font:20pt 'MS Sans Serif';
+}
+
+/*点数ごとの写真のレイアウト*/
+.photo_range{
+  display: flex; /* 重要：フレックスコンテナにする */
+  justify-content: center; /* 水平方向中央寄せ */
+  align-items: center; /* 垂直方向中央寄せ */
+}
+.fukidasi {
+ height: 300px;
+ width: 500px;
+ display: inline-block; /* 画像を水平に配置するため */
+}
+.random_image {
+ height: 140px;
+ width: 120px;
+ display: inline-block; /* 画像を水平に配置するため */
+}
+
+.yourscore {
+  color: #FFF;       /* 文字色を白に変更 */
+  font-size: 50px;   /* 文字サイズを50pxに指定 */
+  font-family: Beon; /* ネオン風のフォントを指定(ダウンロードしたもの) */
+  text-align: center;
+  animation: flash 1s infinite; /* アニメーションflashを1秒ごとに繰り返す */
+}
+@keyframes flash {
+  0%, 100% {
+    /* 明るく光るよう影を重ねる */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+  }
+  50% {
+    /* 淡く光るよう影を重ねる */
+    text-shadow: 0 0 10px #fff, 0 0 20px #fcfcfc, 0 0 30px #fcfcfc, 0 0 40px #fc00de;
+  }
+}

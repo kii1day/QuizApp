@@ -1,0 +1,164 @@
+@charset "UTF-8";
+/*問題番号と正解率に対するスタイル変更*/  
+h3{
+background:linear-gradient(transparent 60%, #ff6 60%);
+}
+/*選択肢の配置レイアウト*/
+.flexbox{
+	margin:50px;
+	display:flex;
+	text-align:center;
+}
+ /*基本選択肢のスタイル*/
+.selecter{
+	margin: 10px 10px;
+    width: 1500px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #68779A;
+    background: #CBE8FA;
+    cursor: pointer;
+    font-size: 20px; /* フォントサイズを設定 */
+}
+/* 正解の選択肢の背景色 */
+.rightchoice {
+    margin: 10px 10px;
+    width: 1500px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #68779A;
+    background: #ffcc00;/*正解の選択肢を黄色に設定*/
+    cursor: pointer;
+    font-size: 20px; /* フォントサイズを設定 */
+}
+/* 自分の選択肢のカラー変更*/
+font{ 
+	color: red;
+}
+.nthnum {
+  text-shadow: 1px 1px 0px #CCFFCC, 3px 3px 2px #FF9999;
+  font: 32pt 'Arial';
+  font-weight: bold;
+  color: #660000;
+  text-align: center;
+}
+.rightper{
+  color: #eee8aa;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.rightper_blue{
+  color: #0000FF;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.rightper_red{
+  color: #FF0000;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.manaka{
+  background-color: #DFEFED;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.quest{
+ background-color: #BFE9DB; /* 吹き出しの背景色 */
+ padding: 20px 30px;  /*内容と吹き出しの境界の間のスペース*/
+ font:18pt 'MS Sans Serif';
+ text-align: left;
+ white-space: pre;/*空白や改行を維持する。*/
+ position: relative; /* 相対位置設定 */
+}
+/* 吹き出しのコンテナ */
+.bubble-container {
+  display: flex;
+  align-items: center; /* 写真と解説欄を縦方向に中央寄せする */
+  justify-content: space-between; /* 写真と解説欄を水平方向に均等に配置 */
+}
+.photo_judge {
+  flex: 1; /* 写真部分が可変幅で残りのスペースを占めるように */
+  text-align: center; /* 写真を中央寄せする */
+}
+.photo_judge img {
+   width: 50%;
+   height: 50%;
+}
+/* 吹き出しのスタイル */
+.cloud-bubble {
+  background-color: #f0f0f0; /* 吹き出しの背景色 */
+  border-radius: 10px; /* 吹き出しの角を丸くする */
+  padding: 30px;  /*内容と吹き出しの境界の間のスペース*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* ドロップシャドウ */
+  position: relative; /* 相対位置 */
+  flex: 2; /* 解説欄部分が可変幅で残りのスペースを占めるように */
+  font:20pt 'MS Sans Serif';
+}
+/* 吹き出しの尾根部分（三角形） */
+.cloud-bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px; /* 左側に配置 */
+  margin-top: -10px; /* 三角形を垂直方向に中央に配置 */
+  border-width: 10px; /* 三角形のサイズ */
+  border-style: solid;
+  border-color: transparent transparent transparent #f0f0f0; /* 透明で影のない部分 */
+}
+.next {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  border-left: solid 4px #668ad8;
+  border-right: solid 4px #668ad8;
+  color: #668ad8;
+  text-shadow: 0 0 5px white;
+  transition: 0.4s;
+  text-align: center;
+  width: 100%; /* 親要素を画面幅いっぱいに広げる */
+}
+.btn_next{
+  width: 100%; /* ボタンを画面幅いっぱいに広げる */
+  padding: 0.5em 0; /* 横方向のパディングは0にするか、必要に応じて調整してください */
+  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 3px, #e9f4ff 3px, #e9f4ff 7px);
+  font-size: 16px; /* フォントサイズを変更 */
+  font-weight: bold; /* フォントウェイトを変更 */
+}
+.btn_next:hover {
+  background: repeating-linear-gradient(-45deg, #cce7ff, #cce7ff 5px, #e9f4ff 5px, #e9f4ff 9px);
+}
+.fin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn_fin {
+  width: 100%; /* ボタンを画面幅いっぱいに広げる */
+  padding: 10px 20px; /* パディングを調整 */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold; /* フォントウェイトを変更 */
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  background-size: 200% auto;
+  color: #fff; /* テキスト色 */
+  transition: background-position 0.5s ease;
+}
+
+.btn_fin:hover {
+  background-position: 100% 0;
+  /* ホバー時にグラデーションを右に移動 */
+}

@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/*問題番号と正解率に対するスタイル変更*/  
+h3 {
+	background: linear-gradient(transparent 60%, #ff6 60%);
+}
+/*選択肢の配置レイアウト*/
+.flexbox {
+	margin: 50px;
+	display: flex;
+	text-align: center;
+}
+/*選択肢１つ１つの要素のスタイル*/
+.selecter {
+	margin: 10px 10px;
+	width: 1500px;
+	padding: 10px;
+	box-sizing: border-box;
+	border: 1px solid #68779A;
+	background: #CBE8FA;
+	cursor: pointer;
+	font-size: 20px; /* フォントサイズを設定 */
+}
+/* 選択肢にホバー時のスタイルを設定 */
+.selecter:hover {
+    color: red; /* ホバー時に文字色を赤色に変更 */
+}
+.nthnum {
+  text-shadow: 1px 1px 0px #CCFFCC, 3px 3px 2px #FF9999;
+  font: 32pt 'Arial';
+  font-weight: bold;
+  color: #660000;
+  text-align: center;
+}
+.rightper{
+  color: #eee8aa;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.rightper_blue{
+  color: #0000FF;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.rightper_red{
+  color: #FF0000;
+  text-align: right;
+  font:22pt 'MS Sans Serif';
+  margin-top:5px;
+}
+.manaka{
+  background-color: #DFEFED;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.quest{
+ background-color: #BFE9DB; /* 吹き出しの背景色 */
+ padding: 20px 30px;  /*内容と吹き出しの境界の間のスペース*/
+ font:18pt 'MS Sans Serif';
+ text-align: left;
+ white-space: pre;/*空白や改行を維持する。*/
+ position: relative; /* 相対位置設定 */
+}
